@@ -1,22 +1,16 @@
 Project.destroy_all
-Joiner.destroy_all
 Technology.destroy_all
 
-# Projects
+######### PROJECTS #########
 watif = Project.create(
     name: "Watif",
     description: "An e-marketplace modeled after Etsy - allowing creativity and uniqueness in products from handmade to vintage items and craft supplies.",
     image: "https://i.postimg.cc/W3tJMTDb/watif.png",    
     github: "https://github.com/valentinem1/watif_frontend",
     demo: "https://www.youtube.com/watch?v=DtVUKqseap8",
-    live_website: ""
-) 
-
-# Rails.root.join('app', 'assets', 'images', 'logo.png')
-# watif.image = Pathname.new(Rails.root.join("./db/portfolio_images/watif.png")).open
-# watif.save!
-# restaurant.logo = Pathname.new(Rails.root.join("db/images/mcdonalds_logo.png")).open
-# restaurant.save!
+    live_website: "",
+    technologies: 'Built with React, Redux, Ruby on Rails, PostgreSQL, Semantic UI, CSS3, Stripe API, Esty API'
+)
 
 travel_advisor = Project.create(
     name: "Travel Advisor",
@@ -24,7 +18,8 @@ travel_advisor = Project.create(
     image: "https://i.postimg.cc/VNw6FM6N/travel-advisor.png",
     github: "https://github.com/valentinem1/Travel_Advisor_frontend",
     demo: "https://www.youtube.com/watch?v=1ZLSS1F6WBs&t=1s",
-    live_website: "https://travel-advisor-app.herokuapp.com/"
+    live_website: "https://travel-advisor-app.herokuapp.com/",
+    technologies: 'Built with React, Ruby on Rails, PostgreSQL, Semantic UI, CSS3'
 )
 
 planet_express = Project.create(
@@ -33,10 +28,11 @@ planet_express = Project.create(
     image: "https://i.postimg.cc/kgBZhh21/planet-express.png",
     github: "https://github.com/valentinem1/Planet-Express-Frontend",
     demo: "https://www.youtube.com/watch?v=oP7dmeB0Y3E",
-    live_website: ""
+    live_website: "",
+    technologies: 'Built with JavaScript, Ruby on Rails, PostgreSQL, CSS3'
 )
 
-# Technologies
+########## TECHNOLOGIES ##########
 react = Technology.create(
     name: "React",
     image: "portfolio_images/react-logo.png"
@@ -81,100 +77,4 @@ esty_api = Technology.create(
     name: "Etsy API",
     image: "portfolio_images/etsy-logo.png"
 )
-
-# Joiners
-
-# watif technologies joiner
-watif_joiner1 = Joiner.create(
-    project: watif,
-    technology: react
-)
-
-watif_joiner2 = Joiner.create(
-    project: watif,
-    technology: redux
-)
-
-watif_joiner3 = Joiner.create(
-    project: watif,
-    technology: css
-)
-
-watif_joiner4 = Joiner.create(
-    project: watif,
-    technology: semantic_ui
-)
-
-watif_joiner5 = Joiner.create(
-    project: watif,
-    technology: ruby_on_rails
-)
-
-watif_joiner6 = Joiner.create(
-    project: watif,
-    technology: postgresql
-)
-
-watif_joiner7 = Joiner.create(
-    project: watif,
-    technology: stripe_api
-)
-
-watif_joiner8 = Joiner.create(
-    project: watif,
-    technology: esty_api
-)
-
-# travel advisor technologies joiner
-travel_advisor_joiner1 = Joiner.create(
-    project: travel_advisor,
-    technology: react
-)
-
-travel_advisor_joiner2 = Joiner.create(
-    project: travel_advisor,
-    technology: css
-)
-
-travel_advisor_joiner3 = Joiner.create(
-    project: travel_advisor,
-    technology: semantic_ui
-)
-
-travel_advisor_joiner4 = Joiner.create(
-    project: travel_advisor,
-    technology: ruby_on_rails
-)
-
-travel_advisor_joiner1 = Joiner.create(
-    project: travel_advisor,
-    technology: postgresql
-)
-
-# Planet Express technologies joiner
-planet_express_joiner1 = Joiner.create(
-    project: planet_express,
-    technology: javascript
-)
-
-planet_express_joiner2 = Joiner.create(
-    project: planet_express,
-    technology: css
-)
-
-planet_express_joiner3 = Joiner.create(
-    project: planet_express,
-    technology: ruby_on_rails
-)
-
-planet_express_joiner4 = Joiner.create(
-    project: planet_express,
-    technology: postgresql
-)
-
-
-
-
-
-
 
